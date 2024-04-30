@@ -1,0 +1,37 @@
+app:
+  version: 0.0.1
+  name: 酷 • 社区
+  desc: 酷 • 社区
+  keywords: 酷 • 社区
+  visitMode: guest
+system:
+  env: debug
+  addr: :8081
+  shutdownWaitTime: 3
+session:
+  name: ku-bbs
+  secret: 123456
+db:
+  host: 127.0.0.1
+  port: 3306
+  name: root
+  pass:
+  db: ku-bbs
+  debug: true
+redis:
+  host: 127.0.0.1
+  pass:
+  port: 6379
+  db: 1
+  idleTimeout: 10
+upload:
+  path: ./assets/upload
+  ext: [ png, jpg, jpeg, gif ]
+  filesize: 1 # 单位 M
+logger:
+  path: ./logs/ku-bbs.log
+  level: 1
+  maxSize: 5
+  maxBackups: 10
+  maxAge: 14
+  compress: true
